@@ -11,6 +11,8 @@ toto = Toto::Server.new do
   # Add your settings here
   # set [:setting], [value]
   #
+  set :title, 'tlog'
+  set :url, 'http://quiet-night-71.heroku.com/'
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
 
