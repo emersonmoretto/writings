@@ -1,5 +1,11 @@
 port = 4567
 
+desc "Publish on Heroku"
+task :publish do
+	puts "Publishing on Heroku"
+	system "git push heroku master"
+end
+
 desc "Start the app server"
 task :start => :stop do
 	puts "Starting the blog"
