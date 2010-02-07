@@ -1,4 +1,26 @@
 port = 4567
+ 
+@config = Hash.new
+@config[:author] = "Thiago Moretto"
+@config[:ext] = "txt"
+
+desc "Prepare new article"
+task :new do
+  article = {'title' => nil, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
+  article << "\n"
+  article << "Once upon a time...\n\n"
+
+  path = "articles/#{Time.now.strftime("%Y-%m-%d")}.#{@config[:ext]}"
+
+  unless File.exist? path
+      File.open(path, "w") do |file|
+        file.write article
+      end
+      puts "an article was created for you at #{path}."
+  else
+      puts "I can't create the article, #{path} already exists."
+  end
+end
 
 desc "Publish on Heroku"
 task :publish do
