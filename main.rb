@@ -25,11 +25,6 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/lib')
 require 'tlog'
 
 layout 'layout'
-        
-### Config
-@@config = Hash.new
-@@config[:summary] = { :max => 150, :delim => /~\n/ }              
-@@config[:url] = 'localhost:4567'
 
 # 
 # Index/MainPage
@@ -79,5 +74,3 @@ end
 get '/about' do
    erb :about, :locals => { :title => '# who am i'}
 end
-
-
