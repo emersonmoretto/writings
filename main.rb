@@ -7,7 +7,7 @@ configure do
   Blog = OpenStruct.new(
     :title => 't.log',
     :author => 'Thiago Moretto',
-    :url => 'http://localhost:4567',             
+    :url => 'http://tlog.heroku.com',             
     :disqus_shortname => 'tdotlog',
     :summary => { :max => 150, :delim => /~\n/ } 
     )
