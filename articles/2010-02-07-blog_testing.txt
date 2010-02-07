@@ -1,7 +1,0 @@
-author: Thiago Moretto
-title: Blog testing... 
-slug: blog_testing
-date: 07/02/2010
-
-Once upon a time...
-
