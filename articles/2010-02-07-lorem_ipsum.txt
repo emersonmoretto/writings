@@ -1,6 +1,7 @@
 title: Lorem ipsum
 author: Thiago Moretto
 slug: lorem_ipsum
+date: 07/02/2010
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis placerat sagittis. Mauris non purus a metus luctus volutpat. Vestibulum non enim nunc. Sed nibh ipsum, vehicula id commodo et, ullamcorper at lectus. Mauris volutpat felis eget risus vehicula vel mollis ligula fringilla. Proin et accumsan libero. Cras massa mauris, faucibus nec sagittis ac, feugiat sit amet massa. Maecenas quis mi enim, vitae pellentesque neque. Morbi tempus, lectus vel condimentum tincidunt, massa dui viverra mauris, quis adipiscing metus odio et risus. Nulla fermentum interdum purus, rutrum tincidunt velit facilisis eget. Phasellus nisi libero, tempus hendrerit pulvinar et, mattis consectetur diam. Mauris at est vel magna placerat sodales. Donec et dolor sit amet nunc auctor pulvinar quis non leo.
 
