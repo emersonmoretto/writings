@@ -15,7 +15,7 @@
 <div id="content">
 	<% articles.each do |article| %>
 	<div class="post">
-		<p class="date"><%= article[:created_at].strftime("%b") %><b><%= article[:created_at].strftime("%d") %></b></p>
+		<p class="date"><%= article[:date].strftime("%b") %><b><%= article[:date].strftime("%d") %></b></p>
 		<h2 class="title"><a href="<%= article.url %>"><%= article[:title] %></a></h2>
 		<p class="meta"><small>
 			<%= article.linked_tags %>

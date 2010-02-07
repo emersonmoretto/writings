@@ -4,7 +4,7 @@
 <div class="postzoom">
 	<h2 class="title"><%= article[:title] %></h2>
 	<p class="meta"><small><%= article.linked_tags %></small></p>
-	<p class="meta"><%= article.created_at %></p>
+	<p class="meta"><%= article[:date].strftime "%d %b %y"  %></p>
 	<div class="entry">
 		<%= article.body_html %>
 	</div>

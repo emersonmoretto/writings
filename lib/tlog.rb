@@ -33,7 +33,6 @@ module TLOG
        self.taint
        self.update data
        self[:date] = Time.parse(self[:date].gsub('/', '-')) rescue Time.now
-       self[:created_at] = DateTime.now        
        self
      end       
 

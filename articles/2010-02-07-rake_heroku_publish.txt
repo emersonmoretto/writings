@@ -2,7 +2,6 @@ title: Rake task to publish your content on Heroku
 author: Thiago Moretto
 slug: rake_heroku_publish
 date: 07/02/2010
-created_at: 2010-02-07 01:21
 
 Publishing your application on Heroku:
 
