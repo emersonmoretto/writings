@@ -1,0 +1,314 @@
+body {
+	margin: 0px;
+	padding: 20px;
+	margin-left: 50px;
+	background: #ffffff;
+	text-align: justify;
+	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	font: 1.82em;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: left;
+}
+
+p, ol, ul {
+	line-height: 1.67em;
+}
+
+ul {
+	padding-left: 1.2em;
+}
+
+a {
+	color: #cc0000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+hr {
+	display: none;
+}
+
+p#author {
+	color: #cccccc;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+/* Logo */
+
+#logo h1 {
+	margin: 0;
+	height: 100px;
+	padding: 40px 0 0 0px;
+	text-transform: lowercase;
+	letter-spacing: 0px;
+	font-size: 2em;
+	font-family: monospace;
+	font-weight: normal;
+}
+
+#logo h1 a {
+	display: block;
+	text-decoration: none;
+	color: #cc3333;
+}
+
+#logo p {
+	margin: -103px 0 0 2px;
+	text-transform: uppercase;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#logo a {
+	display: block;
+}
+
+#logo a .title {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#logo a .sp {
+	text-decoration: none;
+	color: #999999;
+}
+
+#logo2 h1 {
+	margin: 0;
+	height: 30px;
+	padding: 10px 0 0 0px;
+	text-transform: lowercase;
+	letter-spacing: 0px;
+	font-size: 1.5em;
+	font-family: monospace;
+	font-weight: normal;
+	color: #999999;
+}
+
+#logo2 h1 a {
+	display: block;
+	text-decoration: none;
+	color: #999999;
+}
+
+#logo2 p {
+	margin: -103px 0 0 2px;
+	text-transform: uppercase;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#logo2 a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#logo2 a .sp {
+	text-decoration: none;
+	color: #cc0000;
+	font-weight: bold;
+}
+
+/* Content */
+
+#content {
+	margin: 0px auto;
+	padding: 20px 0 0 0;
+	float: left;
+	width: 50em;
+	margin-bottom: 10px;
+}
+
+/* Post */
+
+.post {
+	margin-top: 20px;
+}
+
+.post .date {
+	float: left;
+	width: 29px;
+	height: 32px;
+	margin: 0;
+	margin-top: 3px;
+	margin-right: 20px;
+	padding-top: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+	color: #999999;
+}
+
+.post .date b {
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-top: -5px;
+	font-size: 14px;
+	color: #5C5C5C;
+	
+}
+
+.post .title {
+	margin: 0;
+	padding: 0px 0 0 0;
+	margin-left: 10px;
+	padding-left: 10px;
+	font-size: 1.4em;
+}
+
+.post .title a {
+	color: #cc0000;
+	text-decoration: none;
+}
+
+.post .meta {
+	margin: 0 0 10px 20px;
+	padding: 0;
+	line-height:normal;
+	text-transform: uppercase;
+	color: #979680;
+}
+
+.post .meta a {
+	color: #828170;
+}
+
+.post .entry {
+	margin: 0;
+	padding: 0 0 20px 50px;
+}
+
+#older_posts {
+	font-size: 120%;
+}
+
+#new_post {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+
+/* Post */
+
+.postzoom {
+	margin-top: 20px;
+	position: relative;
+}
+
+.postzoom .title {
+	margin: 0;
+	padding: 0px 0 0 0;
+	font-size: 3em;
+}
+
+.postzoom .meta {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	text-transform: uppercase;
+	color: #979680;
+}
+
+.postzoom .entry {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.postzoom .edit {
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Footer */
+
+#footer {
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+#legal {
+	clear: both;
+	margin: 0;
+	padding: 10px 0;
+	font-size: 10px;
+	color: #525252;
+}
+
+/* Archive */
+.archive .date {
+	font-size: 85%;
+	color: #828170;
+}
+
+.archive .title a {
+	font-size: 120%;
+	text-decoration: none;
+	color: #cc0000;
+}
+
+/* Code blocks */
+
+pre {
+	font-family: Monaco, monospace;
+	color: #ccc;
+	background: #eee;
+	border-left: 6px solid #ccc;
+	padding: 0.4em;
+	padding-left: 0.8em;
+}
+
+pre span.attribute { color: #009900; }
+pre span.char { color: #F00; }
+pre span.class { color: #A020F0; font-weight: bold; }
+pre span.comment { color: #0000FF; }
+pre span.constant { color: #008B8B; }
+pre span.escape { color: #6A5ACD; }
+pre span.expr { color: #2222CC; }
+pre span.global { color: #11AA44; }
+pre span.ident { color: #000000; }
+pre span.keyword { color: #A52A2A; font-weight: bold; }
+pre span.method { color: #008B8B; }
+pre span.module { color: #A020F0; font-weight: bold; }
+pre span.number { color: #DD00DD; }
+pre span.punct { color: #6A5ACD; }
+pre span.regex { color: #DD00DD; }
+pre span.string { color: #DD00DD; }
+pre span.symbol { color: #008B8B; }
+
+/* Edit post */
+
+form[name=edit] input[name=title] {
+	font-size: 100%;
+	width: 300pt;
+}
+form[name=edit] input[name=tags] {
+	font-size: 100%;
+	width: 300pt;
+}
+form[name=edit] textarea {
+	font-size: 100%;
+	width: 50em;
+	height: 25em;
+}
+

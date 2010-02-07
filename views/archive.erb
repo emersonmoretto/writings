@@ -1,0 +1,11 @@
+<a class="monospace" href="/">$ mv me ~/</a>
+<br /><br />
+
+<table class="archive">
+<% articles.each do |article| %>
+	<tr>
+		<td class="date"><%= article[:date].strftime "%d %b %y" %></td>
+		<td class="title"><a href="<%= article.url %>"><%= article.title %></a></td>
+	</tr>
+<% end %>
+</table>

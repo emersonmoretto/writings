@@ -1,0 +1,15 @@
+<a class="monospace" href="/">$ mv me ~/</a><br /><br />
+<a class="monospace" href="/archive">$ cat t.log</a>  
+
+<div class="postzoom">
+	<h2 class="title"><%= article[:title] %></h2>
+	<p class="meta"><small><%= article.linked_tags %></small></p>
+	<p class="meta"><%= article.created_at %></p>
+	<div class="entry">
+		<%= article.body_html %>
+	</div>
+</div>
+
+<% if Blog.disqus_shortname %>
+	<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/<%= Blog.disqus_shortname %>/embed.js"></script><noscript><a href="http://<%= Blog.disqus_shortname %>.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<% end %>
