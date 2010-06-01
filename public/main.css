@@ -4,14 +4,30 @@ body {
 	margin-left: 50px;
 	background: #ffffff;
 	text-align: justify;
-	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font: 13px Verdana, Helvetica, 'Helvetica Neue', 'Bitstream Vera Sans', Arial, sans-serif;
+	/*
+	font: 14px "Monaco", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	*/
 	color: #333333;
+}
+
+#container {
+	width: 650px;
+	float: center;
+	margin: 0 auto;
 }
 
 h1, h2, h3 {
 	font: 1.82em;
-	font-weight: normal;
-	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	/*
+	font-family:Georgia,'Bitstream Vera Sans Serif','Lucida Grande',Helvetica,Verdana,Arial,sans-serif;
+	*/
+	font-family: Verdana, Helvetica, 'Helvetica Neue', 'Bitstream Vera Sans', Arial, sans-serif;
+	
+	/*
+	font-family: "Monaco", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	*/
 	color: #333333;
 	text-align: left;
 }
@@ -44,47 +60,10 @@ p#author {
 	font-family: monospace;
 }
 
-/* Logo */
+#header {
+}
 
 #logo h1 {
-	margin: 0;
-	height: 100px;
-	padding: 40px 0 0 0px;
-	text-transform: lowercase;
-	letter-spacing: 0px;
-	font-size: 2em;
-	font-family: monospace;
-	font-weight: normal;
-}
-
-#logo h1 a {
-	display: block;
-	text-decoration: none;
-	color: #cc3333;
-}
-
-#logo p {
-	margin: -103px 0 0 2px;
-	text-transform: uppercase;
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-}
-
-#logo a {
-	display: block;
-}
-
-#logo a .title {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-
-#logo a .sp {
-	text-decoration: none;
-	color: #999999;
-}
-
-#logo2 h1 {
 	margin: 0;
 	height: 30px;
 	padding: 10px 0 0 0px;
@@ -96,13 +75,13 @@ p#author {
 	color: #999999;
 }
 
-#logo2 h1 a {
+#logo h1 a {
 	display: block;
 	text-decoration: none;
 	color: #999999;
 }
 
-#logo2 p {
+#logo p {
 	margin: -103px 0 0 2px;
 	text-transform: uppercase;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -115,23 +94,14 @@ p#author {
 	color: #FFFFFF;
 }
 
-#logo2 a .sp {
+#logo a .sp {
 	text-decoration: none;
 	color: #cc0000;
 	font-weight: bold;
 }
 
-/* Content */
-
 #content {
-	margin: 0px auto;
-	padding: 20px 0 0 0;
-	float: left;
-	width: 50em;
-	margin-bottom: 10px;
 }
-
-/* Post */
 
 .post {
 	margin-top: 20px;
@@ -147,7 +117,7 @@ p#author {
 	padding-top: 2px;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: bold;
 	color: #999999;
 }
@@ -157,9 +127,8 @@ p#author {
 	padding: 0;
 	display: block;
 	margin-top: -5px;
-	font-size: 14px;
+	font-size: 20px;
 	color: #5C5C5C;
-	
 }
 
 .post .title {
@@ -191,18 +160,6 @@ p#author {
 	margin: 0;
 	padding: 0 0 20px 50px;
 }
-
-#older_posts {
-	font-size: 120%;
-}
-
-#new_post {
-	position: absolute;
-	top: 1em;
-	right: 1em;
-}
-
-/* Post */
 
 .postzoom {
 	margin-top: 20px;
@@ -237,12 +194,11 @@ p#author {
 	right: 0;
 }
 
-/* Footer */
-
 #footer {
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	float: center;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 	color: #FFFFFF;
 }
@@ -271,7 +227,7 @@ p#author {
 
 pre {
 	font-family: Monaco, monospace;
-	color: #ccc;
+	color: #333;
 	background: #eee;
 	border-left: 6px solid #ccc;
 	padding: 0.4em;
@@ -296,19 +252,4 @@ pre span.regex { color: #DD00DD; }
 pre span.string { color: #DD00DD; }
 pre span.symbol { color: #008B8B; }
 
-/* Edit post */
-
-form[name=edit] input[name=title] {
-	font-size: 100%;
-	width: 300pt;
-}
-form[name=edit] input[name=tags] {
-	font-size: 100%;
-	width: 300pt;
-}
-form[name=edit] textarea {
-	font-size: 100%;
-	width: 50em;
-	height: 25em;
-}
 

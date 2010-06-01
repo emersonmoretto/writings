@@ -5,15 +5,22 @@
 	<link href="/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="header">
-	<div id="logo2">
-		<h1><%= title %></h1>
+<div id="container">
+	<div id="header">
+		<div id="logo">
+			<h1><%= title %></h1>
+		</div>
+	</div>
+
+	<div id="content">
+		<%= yield %>
+	</div>               
+
+	<div id="footer">
+		<p id="legal">
+		Content by <a href="/about"><%= Blog.author %></a> | <a href="/feed">RSS</a>               
 	</div>
 </div>
-
-<div id="content">
-	<%= yield %>
-</div>               
 
 <% if Blog.disqus_shortname %>
 	<script type="text/javascript">
@@ -32,9 +39,5 @@
 	</script>
 <% end %>
 
-<div id="footer">
-	<p id="legal">
-	Content by <a href="/about"><%= Blog.author %></a> | <a href="/feed">RSS</a>               
-</div>
 </body>
 </html>

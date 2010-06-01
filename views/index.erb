@@ -6,44 +6,46 @@
 	<link href="/feed" rel="alternate" title="Primary Feed" type="application/atom+xml" />
 </head>
 <body> 
-<div id="header">
-	<div id="logo2">
-		<h1><a href="/"># tail -f -n10&nbsp;<span class="sp"><%= Blog.title %></span></a></h1>
-	</div>
-</div>
-
-<div id="content">
-	<% articles.each do |article| %>
-	<div class="post">
-		<p class="date"><%= article[:date].strftime("%b") %><b><%= article[:date].strftime("%d") %></b></p>
-		<h2 class="title"><a href="<%= article.url %>"><%= article[:title] %></a></h2>
-		<p class="meta"><small>
-			<%= article.linked_tags %>
-			<% if Blog.disqus_shortname %>
-				| <a href="<%= article.url %>#disqus_thread">comments</a>
-			<% end %>
-		</small></p>
-		<div class="entry">
-			<%= article.summary %>
-			<% if article.more? %>
-				<a href="<%= article.url %>">Continue reading &raquo;</a>
-			<% end %>
+<div id="container">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="/"># tail -f -n10&nbsp;<span class="sp"><%= Blog.title %></span></a></h1>
 		</div>
 	</div>
-	<% end %>
 
-	<% if articles.empty? %>
-		<h2><p><span class="monospace">tail: t.log: No such file or directory</span></p></h2>
-	<% else %>
-		<div id="older_posts">
-			<a href="/archive">Archive</a>
+	<div id="content">
+		<% articles.each do |article| %>
+		<div class="post">
+			<p class="date"><%= article[:date].strftime("%b") %><b><%= article[:date].strftime("%d") %></b></p>
+			<h2 class="title"><a href="<%= article.url %>"><%= article[:title] %></a></h2>
+			<p class="meta"><small>
+				<%= article.linked_tags %>
+				<% if Blog.disqus_shortname %>
+					| <a href="<%= article.url %>#disqus_thread">comments</a>
+				<% end %>
+			</small></p>
+			<div class="entry">
+				<%= article.summary %>
+				<% if article.more? %>
+					<a href="<%= article.url %>">Continue reading &raquo;</a>
+				<% end %>
+			</div>
 		</div>
-	<% end %>
-</div>
+		<% end %>
 
-<div id="footer">
-	<p id="legal">
-	Content by <a href="/about"><%= Blog.author %></a> | <a href="/feed">RSS</a>
+		<% if articles.empty? %>
+			<h2><p><span class="monospace">tail: t.log: No such file or directory</span></p></h2>
+		<% else %>
+			<div id="older_posts">
+				<a href="/archive">Archive</a>
+			</div>
+		<% end %>
+	</div>
+
+	<div id="footer">
+		<p id="legal">
+		Content by <a href="/about"><%= Blog.author %></a> | <a href="/feed">RSS</a>
+	</div>
 </div>
 </body>
 </html>

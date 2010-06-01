@@ -10,7 +10,7 @@ module TLOG
   class Site
     def self.articles ext       
       # TODO: Parametrizar
-      Dir['articles/*.txt']
+      Dir['articles/*.markdown']
     end
   end
                                            

@@ -7,7 +7,7 @@ configure do
   Blog = OpenStruct.new(
     :title => 't.log',
     :author => 'Thiago Moretto',
-    :url => 'http://tlog.heroku.com',             
+    :url => 'http://localhost:4567/',             
     :disqus_shortname => 'tdotlog',
     :summary => { :max => 150, :delim => /~\n/ } 
     )
@@ -30,7 +30,7 @@ layout 'layout'
 # Index/MainPage
 #
 get '/' do
-  articles = TLOG::Site.articles(".txt").reverse.map do |a|
+  articles = TLOG::Site.articles(".markdown").reverse.map do |a|
     TLOG::Article.new(File.new(a), Blog)
   end
 	
@@ -41,7 +41,7 @@ end
 # Article/Post
 #                     
 get '/:year/:month/:day/:slug/' do                                                                                      
-  file = "articles/#{params[:year]}-#{params[:month]}-#{params[:day]}-#{params[:slug]}.txt"
+  file = "articles/#{params[:year]}-#{params[:month]}-#{params[:day]}-#{params[:slug]}.markdown"
   article = TLOG::Article.new(File.new(file), Blog)
   stop [ 404, "Article not found"] unless article
   erb :article, :locals => { :article => article, :title => "# cat #{file}" }
@@ -51,7 +51,7 @@ end
 # Full Archive
 #
 get '/archive' do                 
-  articles = TLOG::Site.articles(".txt").reverse.map do |a|     
+  articles = TLOG::Site.articles(".markdown").reverse.map do |a|     
     TLOG::Article.new(File.new(a), Blog)
   end
   
@@ -59,7 +59,7 @@ get '/archive' do
 end
 
 get '/feed' do      
-  @articles = TLOG::Site.articles(".txt").reverse.map do |a|     
+  @articles = TLOG::Site.articles(".markdown").reverse.map do |a|     
     TLOG::Article.new(File.new(a), Blog)
   end
   
