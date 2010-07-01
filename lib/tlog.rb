@@ -53,7 +53,7 @@ module TLOG
      
      # ToDo
      def more?
-       false
+       true
      end
   
      def method_missing m, *args, &blk

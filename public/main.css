@@ -4,15 +4,18 @@ body {
 	margin-left: 50px;
 	background: #ffffff;
 	text-align: justify;
-	font: 13px Verdana, Helvetica, 'Helvetica Neue', 'Bitstream Vera Sans', Arial, sans-serif;
+	font: 14px Georgia, sans-serif;
+
 	/*
+
+	font: 13px Verdana, Helvetica, 'Helvetica Neue', 'Bitstream Vera Sans', Arial, sans-serif;
 	font: 14px "Monaco", "Trebuchet MS", Arial, Helvetica, sans-serif;
 	*/
 	color: #333333;
 }
 
 #container {
-	width: 650px;
+	width: 720px;
 	float: center;
 	margin: 0 auto;
 }
@@ -23,9 +26,9 @@ h1, h2, h3 {
 	/*
 	font-family:Georgia,'Bitstream Vera Sans Serif','Lucida Grande',Helvetica,Verdana,Arial,sans-serif;
 	*/
+	/*
 	font-family: Verdana, Helvetica, 'Helvetica Neue', 'Bitstream Vera Sans', Arial, sans-serif;
 	
-	/*
 	font-family: "Monaco", "Trebuchet MS", Arial, Helvetica, sans-serif;
 	*/
 	color: #333333;
@@ -41,11 +44,23 @@ ul {
 }
 
 a {
-	color: #cc0000;
+	color: #666666;
+	text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
+}
+
+div#content a {
+	color: #006699;
+}
+
+div#content a:hover {
+	text-decoration: underline;
+
+	background-color: #f2f8f8;
+	text-decoration: underline;	
 }
 
 hr {
@@ -78,13 +93,13 @@ p#author {
 #logo h1 a {
 	display: block;
 	text-decoration: none;
-	color: #999999;
+	/* color: #999999; */
 }
 
 #logo p {
 	margin: -103px 0 0 2px;
 	text-transform: uppercase;
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-family: Georgia, Tahoma, Arial, Helvetica, sans-serif;
 	font-weight: bold;
 }
 
@@ -96,8 +111,8 @@ p#author {
 
 #logo a .sp {
 	text-decoration: none;
-	color: #cc0000;
-	font-weight: bold;
+	/* color: #cc0000; */
+	font-weight: none;
 }
 
 #content {
@@ -128,7 +143,7 @@ p#author {
 	display: block;
 	margin-top: -5px;
 	font-size: 20px;
-	color: #5C5C5C;
+	color: black;
 }
 
 .post .title {

@@ -4,12 +4,12 @@ require 'sinatra'
 # sinatra configure
 configure do
   require 'ostruct'
-  Blog = OpenStruct.new(
-    :title => 't.log',
-    :author => 'Thiago Moretto',
-    :url => 'http://localhost:4567/',             
+  Blog                = OpenStruct.new(
+    :title            => "Thiago Moretto's blog",
+    :author           => "Thiago Moretto",
+    :url              => 'http://localhost:4567/',             
     :disqus_shortname => 'tdotlog',
-    :summary => { :max => 150, :delim => /~\n/ } 
+    :summary          => { :max => 150, :delim => /~\n/ } 
     )
 end                
 
@@ -34,7 +34,7 @@ get '/' do
     TLOG::Article.new(File.new(a), Blog)
   end
 	
-	erb :index, :locals => { :articles => articles }, :layout => false
+	erb :index, :locals => { :articles => articles }
 end
             
 #
@@ -44,7 +44,7 @@ get '/:year/:month/:day/:slug/' do
   file = "articles/#{params[:year]}-#{params[:month]}-#{params[:day]}-#{params[:slug]}.markdown"
   article = TLOG::Article.new(File.new(file), Blog)
   stop [ 404, "Article not found"] unless article
-  erb :article, :locals => { :article => article, :title => "# cat #{file}" }
+  erb :article, :locals => { :article => article }
 end           
               
 #

@@ -1,6 +1,6 @@
-<br /><br />
-<a class="monospace" href="/">$ mv me ~/</a><br /><br />
-<a class="monospace" href="/archive">$ cat t.log</a>  
+<p>
+	<a class="monospace" href="/">&larr; Back</a> 
+</p>
 
 <div class="postzoom">
 	<h2 class="title"><%= article[:title] %></h2>
@@ -14,3 +14,4 @@
 <% if Blog.disqus_shortname %>
 	<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/<%= Blog.disqus_shortname %>/embed.js"></script><noscript><a href="http://<%= Blog.disqus_shortname %>.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 <% end %>
+
