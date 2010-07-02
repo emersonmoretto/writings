@@ -5,9 +5,9 @@ require 'sinatra'
 configure do
   require 'ostruct'
   Blog                = OpenStruct.new(
-    :title            => "Thiago Moretto's blog",
+    :title            => "Thiago Moretto writings",
     :author           => "Thiago Moretto",
-    :url              => 'http://localhost:4567/',             
+    :url              => 'http://thiago.moretto.eng.br/',             
     :disqus_shortname => 'tdotlog',
     :summary          => { :max => 150, :delim => /~\n/ } 
     )
