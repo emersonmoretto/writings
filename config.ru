@@ -1,11 +1,4 @@
-require 'rubygems'
-require 'sinatra'
+# This file is used by Rack-based servers to start the application.
 
-Sinatra::Application.default_options.merge!(
-  :views => File.join(File.dirname(__FILE__), 'views'),
-  :run => false,
-  :env => ENV['RACK_ENV']
-)
-
-require 'main'
-run Sinatra.application
+require ::File.expand_path('../config/environment',  __FILE__)
+run Writings::Application
