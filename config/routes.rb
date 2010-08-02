@@ -40,6 +40,16 @@ Writings::Application.routes.draw do |map|
   #       get :recent, :on => :collection
   #     end
   #   end
+  
+  
+  resources :articles do
+    collection do
+      get :tag      
+    end
+  end    
+  
+  match 'articles/tag/*' => 'articles#tag'
+  
 
   # Sample resource route within a namespace:
   #   namespace :admin do
@@ -56,5 +66,5 @@ Writings::Application.routes.draw do |map|
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end

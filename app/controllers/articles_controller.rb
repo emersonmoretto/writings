@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def tag    
+    @articles = Article.tag(params[:id])
+  end
+  
   # GET /articles/1
   # GET /articles/1.xml
   def show
