@@ -283,6 +283,12 @@ height:7px;
   min-height:115px;
 }
 
+#article_title{
+  width: 95%;
+}
+#article_content{
+  width: 95%;
+}
 
 form {
 -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.5);

@@ -1,3 +1,5 @@
+<div id="left" style="width:50%">
+  
 <%= form_for(@article) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -35,3 +37,12 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>
+
+<div id="right" style="width:45%;">
+   <div class="wmd-preview"></div>
+</div>
+    
+
+<%= javascript_include_tag "wmd/wmd" %>
