@@ -2,13 +2,24 @@
 <html>
 <head>
   <title>Writings</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+    
   <div id="container">
     <%= yield %>
+    
+    
   </div>
+  
+  <div class="clear footer">
+    This blog is open-source, fork it at <a href="http://github.com/emersonmoretto/writings" target="_blank">http://github.com/emersonmoretto/writings</a><br/></br/>
+    Internet Explorer ins't welcome here          
+    </div>
+  
+  
+  
 </body>
 </html>

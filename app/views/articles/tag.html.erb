@@ -11,7 +11,7 @@
     <p><%= article.author %></p>
     <p>tags 
     <% article.tags.split(",").each do |tag| %>       
-      <%= link_to tag, :action=>"tag", :id => tag %>
+      <%= link_to tag, "/articles/tag/#{tag.strip}" %>
     <% end %>
     </p>
     <p>

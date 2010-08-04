@@ -1,14 +1,21 @@
-<h1>Articles</h1>
+
+ 
+<div id="left">
 
 <% @articles.each do |article| %>
   
-    <h2 class="title"><%= link_to article.title, article  %></a></h2>    
-    <p class="date"><%= article.date.strftime("%b") %><b><%= article.date.strftime("%d") %></b></p>    
+    <div class="title">
+    <h1><%=article.title%></h1>
+    </div>
     
+    <p class="date">at <%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
+    
+    <div class="abstract">
     <%= article.content %>
-    
+    </div>
     
     <p><%= article.author %></p>
+    
     <p>tags 
     <% article.tags.split(",").each do |tag| %>       
       <%= link_to tag, "/articles/tag/#{tag.strip}" %>
@@ -21,7 +28,15 @@
   
 <% end %>
 
+</div>
 
-<br />
+<div id="right">
+  info/contact    
+</div>
 
-<%= link_to 'New Article', new_article_path %>
+<br/>
+
+<div class="clear">
+  <%= link_to 'New Article', new_article_path %>    
+</div>
+
