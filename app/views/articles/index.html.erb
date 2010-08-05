@@ -11,7 +11,7 @@
     <p class="date">at <%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
     
     <div class="abstract">
-    <%= article.content %>
+    <%= article.content.html_safe %>    
     </div>
     
     <p><%= article.author %></p>
@@ -38,5 +38,10 @@
 
 <div class="clear">
   <%= link_to 'New Article', new_article_path %>    
+  
+  
+  <% (1..Article.page_count).each do |i| %>  
+  <%=i%>
+  <%end%>
 </div>
 
