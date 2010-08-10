@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.all if params[:page].nil?    
+    @articles = Article.all    
   end
 
   def tag    
     @articles = Article.tag(params[:id])
+    render :index
   end
     
   def show

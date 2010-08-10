@@ -30,8 +30,20 @@
 
 </div>
 
-<div id="right">
-  info/contact    
+<div id="right">  
+  <br/>
+  <h3>Contact</h3>
+  <img src="/images/gmail.ico"/> emerson@moretto.eng.br<br/>
+  <img src="/images/twitter.ico"/> <a href="http://www.twitter.com/emersonmoretto" target="_blank">twitter</a><br/>
+  <img src="/images/linkedin.ico"/> <a href="http://www.linkedin.com/in/emersonmoretto" target="_blank">linkedin</a><br/>
+  
+  <br/>
+  <br/>
+  <br/>
+  <h3>Tags</h3>
+  <% Article.all_tags.each do |tag| %>
+    <%= link_to tag, "/articles/tag/#{tag.strip}" %><br/>
+  <%end%>
 </div>
 
 <br/>
