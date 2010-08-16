@@ -8,24 +8,18 @@
     <h1><%=article.title%></h1>
     </div>
     
-    <p class="date">at <%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
+    <p class="date">@<%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
     
     <div class="abstract">
     <%= article.content.html_safe %>    
     </div>
-    
-    <p><%= article.author %></p>
-    
+        
     <p>tags 
     <% article.tags.split(",").each do |tag| %>       
       <%= link_to tag, "/articles/tag/#{tag.strip}" %>
     <% end %>
     </p>
-    <p>
-    <%= link_to 'Show', article %>
-    <%= link_to 'Edit', edit_article_path(article) %>
-    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></p>
-  
+    <p>    
 <% end %>
 
 </div>
@@ -46,14 +40,13 @@
   <%end%>
 </div>
 
-<br/>
 
 <div class="clear">
-  <%= link_to 'New Article', new_article_path %>    
-  
-  
+  <br/> 
+  Pages
   <% (1..Article.page_count).each do |i| %>  
-  <%=i%>
+  <%= link_to i, "/articles/page/#{i}" %>
   <%end%>
 </div>
-
+<br/>
+<br/>

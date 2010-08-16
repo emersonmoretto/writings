@@ -1,7 +1,21 @@
 class ArticlesController < ApplicationController
   
+  before_filter :filter, :except=> [:show,:index,:tag,:page] 
+  
+  def filter
+      if session[:user].nil?
+        redirect_to :controller=>"accounts", :action=>"login"
+      return
+    end
+  end
+  
   def index
-    @articles = Article.all    
+    @articles = Article.published    
+  end
+  
+  def page    
+    @articles = Article.page params[:id].to_i if !params[:id].nil?
+    render :index    
   end
 
   def tag    
@@ -15,6 +29,10 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+  end
+  
+  def admin
+    @articles = Article.all    
   end
 
   # GET /articles/1/edit

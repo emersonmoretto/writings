@@ -1,4 +1,5 @@
 Writings::Application.routes.draw do |map|
+  
   resources :articles
 
   # The priority is based upon order of creation:
@@ -41,14 +42,23 @@ Writings::Application.routes.draw do |map|
   #     end
   #   end
   
-  
+
+  match 'articles/tag/*' => 'articles#tag'  
+  match '/admin' => 'articles#admin'
+    
   resources :articles do
     collection do
-      get :tag      
+      get :admin, :tag
     end
-  end    
+  end  
   
-  match 'articles/tag/*' => 'articles#tag'
+  resources :accounts do
+    collection do
+      get :login, :logout
+      post :doLogin
+    end
+  end
+  
   
 
   # Sample resource route within a namespace:
