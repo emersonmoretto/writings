@@ -1,0 +1,44 @@
+
+ 
+<div>
+<br/>
+<hr/>
+<h1>Admin panel</h1>
+<%= link_to 'New Article', new_article_path %> |
+<%= link_to 'Logout', :controller=>"accounts", :action=>"logout" %><br/> 
+tags:  
+ <% Article.all_tags.each do |tag| %>
+    <%= link_to tag, "/articles/tag/#{tag.strip}" %> |
+  <%end%>
+<hr/>
+
+<% @articles.each do |article| %>
+  
+    <div class="title">
+    <h1><%=article.title%></h1>    
+    <%= link_to 'Edit', edit_article_path(article) %> |
+    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></p>
+    </div>
+    
+    <p class="date">@<%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
+    
+    <div class="abstract">
+    <%= article.content.html_safe %>    
+    </div>
+    
+    <p>tags 
+    <% article.tags.split(",").each do |tag| %>       
+      <%= link_to tag, "/articles/tag/#{tag.strip}" %>
+    <% end %>
+    </p>      
+  
+<% end %>
+</div>
+
+<br/>
+<br/>
+<br/>
+<div class="clear">
+      
+</div>
+
