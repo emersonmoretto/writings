@@ -38,6 +38,27 @@ h1, .h1 {
   padding-bottom:4px;
 }
 
+h1 a {
+  color: #444444;
+  font-size:42px;
+  font-weight:900;
+  line-height:36px;
+  margin-bottom:13px;
+  padding-bottom:4px;
+}
+
+h1 a:visited {
+  color: #444444;
+}
+
+h1 a:active {
+  color: #444444;
+}
+
+h1 a:hover {
+  color: #990000;
+}
+
 html  {
   font:14px/18px "museo-slab-1","museo-slab-2","museo slab","rockwell std","rockwell",serif;
   text-shadow:0 1px 0 rgba(255, 255, 255, 0.698);
@@ -82,6 +103,11 @@ div .abstract{
 
 div .head{
   color: #FFFFFF;
+}
+
+div#disqus_thread{
+  width: 60%;
+  
 }
 
 #container {

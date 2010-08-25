@@ -5,13 +5,13 @@
 <% @articles.each do |article| %>
   
     <div class="title">
-    <h1><%=article.title%></h1>
+    <h1><%= link_to article.title, article%></h1>
     </div>
     
     <p class="date">@<%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
     
     <div class="abstract">
-    <%= article.content.html_safe %>    
+    <%= article.content[0..2000].html_safe %> <%= link_to "...continue lendo", article%>    
     </div>
         
     <p>tags 
@@ -19,7 +19,7 @@
       <%= link_to tag, "/articles/tag/#{tag.strip}" %>
     <% end %>
     </p>
-    <p>    
+        
 <% end %>
 
 </div>
@@ -39,15 +39,20 @@
   <% Article.all_tags.each do |tag| %>
     <%= link_to tag, "/articles/tag/#{tag.strip}" %><br/>
   <%end%>
+  
+  
 </div>
 
 
 <div class="clear">
-  <br/> 
-  Pages
-  <% (1..Article.page_count).each do |i| %>  
-  <%= link_to i, "/articles/page/#{i}" %>
-  <%end%>
+  <br/>
+  <%# (1..Article.page_count).each do |i| %>  
+  <%#= link_to i, "/articles/page/#{i}" %>
+  <%#end%>
+  
+  
+   
+  
 </div>
 <br/>
 <br/>

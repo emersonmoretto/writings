@@ -40,7 +40,10 @@
   <%= stylesheet_link_tag "application", "github" %>  
     
   <%= csrf_meta_tag %>
-
+  
+  
+  
+ 
 </head>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -67,6 +70,9 @@
       <%= yield %>
     </div>
     
+   
+
+
     <footer>      
     </footer>
   </div> <!--! end of #container -->
@@ -101,6 +107,16 @@
 </script>
   
 </body>
+
+<script type="text/javascript">
+var disqus_shortname = 'emoretto';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://disqus.com/forums/emoretto/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
 </html>
 
 
