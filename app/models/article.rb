@@ -1,4 +1,6 @@
 require 'maruku'
+require 'coderay'
+
 
 class Article < ActiveRecord::Base
       
@@ -26,10 +28,35 @@ class Article < ActiveRecord::Base
   end
         
   def to_html      
-     doc = Maruku.new(content)
-     doc.to_html
-  end
-  
+     #doc = Maruku.new(content)     
+     #doc.to_html
+     
+      out = []
+      noncode = []
+      code_block = nil
+      content.split("\n").each do |line|
+        if !code_block and line.strip.downcase == '<code>'
+          out << Maruku.new(noncode.join("\n")).to_html
+          noncode = []
+          code_block = []
+        elsif code_block and line.strip.downcase == '</code>'
+
+          #CodeRay 
+          out << CodeRay.scan(code_block.join("\n"), :ruby).div
+
+          code_block = nil
+        elsif code_block
+          code_block << line
+        else
+          noncode << line
+        end
+      end
+      out << Maruku.new(noncode.join("\n")).to_html
+      puts out
+      out.join("\n")
+   end
+   
+     
   def self.page_count
     (Article.published.count / PAGE_SIZE).ceil
   end

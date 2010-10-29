@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div id="left">
+  
  <div class="title">
     <h1><%=@article.title%></h1>
     </div>
@@ -7,7 +9,7 @@
     <p class="date">@<%= @article.date.strftime("%d") %><b><%= @article.date.strftime("%b") %></b><%= @article.date.strftime("%y") %></p>    
     
     <div class="abstract">
-    <%= @article.content.html_safe %>    
+    <%= @article.to_html.html_safe %> 
     </div>
         
     <p>tags 
@@ -29,7 +31,10 @@
     })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=emoretto">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
+
+</div>
+
+<%= render 'right' %>
 
 <%= link_to 'Back', articles_path %>

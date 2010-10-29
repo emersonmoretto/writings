@@ -23,7 +23,7 @@ tags:
     <p class="date">@<%= article.date.strftime("%d") %><b><%= article.date.strftime("%b") %></b><%= article.date.strftime("%y") %></p>    
     
     <div class="abstract">
-    <%= article.content.html_safe %>    
+    <%= article.content.html_safe if !article.content.nil? %>    
     </div>
     
     <p>tags 
